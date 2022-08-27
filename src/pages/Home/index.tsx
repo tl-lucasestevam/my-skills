@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Text, SafeAreaView, TextInput, TouchableOpacity } from 'react-native';
 import { Button } from '../../components/Button';
+import { SkillCard } from '../../components/SkillCard';
 import { styles } from './styles';
 
 export const Home = (): JSX.Element => {
@@ -30,12 +31,7 @@ export const Home = (): JSX.Element => {
         My Skills
       </Text>
       {skills.map(skillName => (
-        <TouchableOpacity
-          key={skillName}
-          activeOpacity={0.7}
-          style={styles.buttonSkill}>
-          <Text style={styles.textSkill}>{skillName}</Text>
-        </TouchableOpacity>
+        <SkillCard key={skillName}>{skillName}</SkillCard>
       ))}
     </SafeAreaView>
   );
