@@ -16,19 +16,18 @@ export const styles = StyleSheet.create({
     backgroundColor: '#1F1E25',
     color: '#fff',
     fontSize: 16,
-    padding: 10,
+    padding: 16,
     marginTop: 30,
     borderRadius: 4,
   },
-  button: {
-    backgroundColor: '#A370F7',
-    padding: 10,
-    fontSize: 16,
+  buttonSkill: {
+    padding: 16,
     borderRadius: 4,
+    backgroundColor: '#1F1E25',
     alignItems: 'center',
-    marginTop: 20,
+    marginVertical: 10,
   },
-  buttonText: {
+  textSkill: {
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
