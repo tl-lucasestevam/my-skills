@@ -1,5 +1,5 @@
 import React from 'react';
-import {Home} from './src/pages/Home';
+import { Home } from './src/pages/Home';
 
 const App = (): JSX.Element => {
   return <Home />;
