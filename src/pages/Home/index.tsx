@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, SafeAreaView, TextInput, TouchableOpacity } from 'react-native';
+import { Text, SafeAreaView, TextInput, FlatList } from 'react-native';
 import { Button } from '../../components/Button';
 import { SkillCard } from '../../components/SkillCard';
 import { styles } from './styles';
@@ -14,6 +14,7 @@ export const Home = (): JSX.Element => {
     }
 
     setSkills(oldValue => [...oldValue, skill]);
+    setSkill('');
   };
 
   return (
@@ -30,9 +31,11 @@ export const Home = (): JSX.Element => {
       <Text style={[styles.title, { marginTop: 30, marginBottom: 10 }]}>
         My Skills
       </Text>
-      {skills.map(skillName => (
-        <SkillCard key={skillName}>{skillName}</SkillCard>
-      ))}
+      <FlatList
+        data={skills}
+        keyExtractor={item => item}
+        renderItem={({ item }) => <SkillCard>{item}</SkillCard>}
+      />
     </SafeAreaView>
   );
 };
